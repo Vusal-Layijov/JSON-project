@@ -100,166 +100,165 @@ Test this in Postman or by using `fetch` in the browser.
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
+- Method:get
+- URL:/artists/id:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:content-type:application/json
+- Body:{"name":"Red Hot Chili Peppers","artistId":1,"albums":[{"name":"Stadium Arcadium","albumId":1,"artistId":1}]}
 
 ### Add an artist
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:Post;
+- URL:/Artists
+- Headers:{"Content-Type":"Application/json"}
+- Body:{name:"Vidal"}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:201;
+- Headers:{"Content-Type":"application/json"}
+- Body:{"name":"Worldiiiiiii","artistId":2}
 
 ### Edit a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:"PUT"
+- URL:Artists/artistId
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"name":"Vusal"}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200;
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"name":"Vusal","artistId":2,"updatedAt":"2022-12-15T22:08:01.628Z"}
 
 ### Delete a specified artist by artistId
 
 Request components:
 
-- Method:
-- URL:
+- Method:Delete;
+- URL:Artists/artistId
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200;
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"message":"Sucessfully deleted"}
 
 ### Get all albums of a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
+- Method:"GET"
+- URL:artists/albums
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:{"Content-Type":"Application/json"}
+- Body:[{"name":"Stadium Arcadium","albumId":1,"artistId":1}]
 
 ### Get a specific album's details based on albumId
 
 Request components:
 
-- Method:
-- URL:
+- Method:Get;
+- URL:albums/albumid
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200;
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"name":"Stadium Arcadium","albumId":1,"artistId":1,"artist":{"name":"Red Hot Chili Peppers","artistId":1},"songs":[{"name":"Dani California","lyrics":"Getting born in the state of Mississippi\nPapa was a copper, and her mama was a hippy\nIn Alabama she would swing a hammer\nPrice you got to pay when you break the panorama\nShe never knew that there was anything more than poor\nWhat in the world does your company take me for?\nBlack bandanna, sweet Louisiana\nRobbing on a bank in the state of Indiana\nShe's a runner\nRebel, and a stunner\nOn her merry way saying baby, watcha gonna?\nLooking down the barrel of a hot metal forty-five\nJust another way to survive\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nShe's a lover, baby, and a fighter\nShould've seen it coming when I got a little brighter\nWith a name like Dani California\nDay was gonna come when I was gonna mourn ya\nA little loaded, she was stealing another breath\nI love my baby to death\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nWho knew the other side of you?\nWho knew that others died to prove?\nToo true to say goodbye to you\nToo true to say, say, say\nPushed the fader, gifted animator\nOne for the now, and eleven for the later\nNever made it up to Minnesota\nNorth Dakota man\nWasn't gunnin' for the quota\nDown in the Badlands she was saving the best for last\nIt only hurts when I laugh\nGone too fast\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah","trackNumber":1,"songId":1,"createdAt":"2022-12-15T21:18:49.000Z","updatedAt":"2022-12-15T21:18:49.000Z","albumId":1}]}
 
 ### Add an album to a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:Post
+- URL:artists/1/albums
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"name":"Yeni"}
 
 Response components:
 
-- Status code:
+- Status code:201
 - Headers:
-- Body:
+- Body:{"name":"Lapyeni","albumId":6,"artistId":1}
 
 ### Edit a specified album by albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:Put
+- URL:albunms/1
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"name":"Deyisdi"}
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:{"Content-Type":"application/json"}
+- Body:{"name":"Deyisdi","albumId":1,"artistId":1,"artist":{"name":"Red Hot Chili Peppers","artistId":1},"songs":[{"name":"Dani California","lyrics":"Getting born in the state of Mississippi\nPapa was a copper, and her mama was a hippy\nIn Alabama she would swing a hammer\nPrice you got to pay when you break the panorama\nShe never knew that there was anything more than poor\nWhat in the world does your company take me for?\nBlack bandanna, sweet Louisiana\nRobbing on a bank in the state of Indiana\nShe's a runner\nRebel, and a stunner\nOn her merry way saying baby, watcha gonna?\nLooking down the barrel of a hot metal forty-five\nJust another way to survive\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nShe's a lover, baby, and a fighter\nShould've seen it coming when I got a little brighter\nWith a name like Dani California\nDay was gonna come when I was gonna mourn ya\nA little loaded, she was stealing another breath\nI love my baby to death\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nWho knew the other side of you?\nWho knew that others died to prove?\nToo true to say goodbye to you\nToo true to say, say, say\nPushed the fader, gifted animator\nOne for the now, and eleven for the later\nNever made it up to Minnesota\nNorth Dakota man\nWasn't gunnin' for the quota\nDown in the Badlands she was saving the best for last\nIt only hurts when I laugh\nGone too fast\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah","trackNumber":1,"songId":1,"createdAt":"2022-12-15T21:18:49.000Z","updatedAt":"2022-12-15T21:18:49.000Z","albumId":1}]}
 
 ### Delete a specified album by albumId
 
 Request components:
 
-- Method:
-- URL:
+- Method:Delete
+- URL:albums/1
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:{"Content-Type":"Application/json"}
+- Body:{"message":"Sucessfully deleted"}
 
 ### Get all songs of a specific artist based on artistId
 
 Request components:
 
-- Method:
-- URL:
+- Method:get
+- URL:artists/1/songs
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
+- Status code:200
 - Headers:
-- Body:
+- Body:[{"name":"Dani California","lyrics":"Getting born in the state of Mississippi\nPapa was a copper, and her mama was a hippy\nIn Alabama she would swing a hammer\nPrice you got to pay when you break the panorama\nShe never knew that there was anything more than poor\nWhat in the world does your company take me for?\nBlack bandanna, sweet Louisiana\nRobbing on a bank in the state of Indiana\nShe's a runner\nRebel, and a stunner\nOn her merry way saying baby, watcha gonna?\nLooking down the barrel of a hot metal forty-five\nJust another way to survive\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nShe's a lover, baby, and a fighter\nShould've seen it coming when I got a little brighter\nWith a name like Dani California\nDay was gonna come when I was gonna mourn ya\nA little loaded, she was stealing another breath\nI love my baby to death\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nWho knew the other side of you?\nWho knew that others died to prove?\nToo true to say goodbye to you\nToo true to say, say, say\nPushed the fader, gifted animator\nOne for the now, and eleven for the later\nNever made it up to Minnesota\nNorth Dakota man\nWasn't gunnin' for the quota\nDown in the Badlands she was saving the best for last\nIt only hurts when I laugh\nGone too fast\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah","trackNumber":1,"songId":1,"albumId":1}]
 
 ### Get all songs of a specific album based on albumId
 
 Request components:
 
-- Method:
-- URL:
+- Method:get
+- URL:albums/1/songs
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
+- Status code:200
 - Headers:
-- Body:
+- Body:[{"name":"Dani California","lyrics":"Getting born in the state of Mississippi\nPapa was a copper, and her mama was a hippy\nIn Alabama she would swing a hammer\nPrice you got to pay when you break the panorama\nShe never knew that there was anything more than poor\nWhat in the world does your company take me for?\nBlack bandanna, sweet Louisiana\nRobbing on a bank in the state of Indiana\nShe's a runner\nRebel, and a stunner\nOn her merry way saying baby, watcha gonna?\nLooking down the barrel of a hot metal forty-five\nJust another way to survive\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nShe's a lover, baby, and a fighter\nShould've seen it coming when I got a little brighter\nWith a name like Dani California\nDay was gonna come when I was gonna mourn ya\nA little loaded, she was stealing another breath\nI love my baby to death\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nWho knew the other side of you?\nWho knew that others died to prove?\nToo true to say goodbye to you\nToo true to say, say, say\nPushed the fader, gifted animator\nOne for the now, and eleven for the later\nNever made it up to Minnesota\nNorth Dakota man\nWasn't gunnin' for the quota\nDown in the Badlands she was saving the best for last\nIt only hurts when I laugh\nGone too fast\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah\nCalifornia, rest in peace\nSimultaneous release\nCalifornia, show your teeth\nShe's my priestess\nI'm your priest\nYeah, yeah, yeah","trackNumber":1,"songId":1,"albumId":1}]
 
 ### Get all songs of a specified trackNumber
 
@@ -277,44 +276,44 @@ constrained by for this endpoint?
 
 Request components:
 
-- Method:
-- URL:
+- Method:Get
+- URL:/trackNumbers/:trackNumber/songs
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:{"Content-Type":"application/json"}
+- Body:Long body
 
 ### Get a specific song's details based on songId
 
 Request components:
 
-- Method:
-- URL:
+- Method:Get
+- URL:songs/songId
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
+- Status code:200
 - Headers:
-- Body:
+- Body:long body
 
 ### Add a song to a specific album based on albumId
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:Post
+- URL:albums/1/songs
+- Headers: {"Content-Type":"Application/json"}
+- Body:name : promoy
 
 Response components:
 
-- Status code:
+- Status code:20
 - Headers:
 - Body:
 
@@ -322,10 +321,10 @@ Response components:
 
 Request components:
 
-- Method:
-- URL:
-- Headers:
-- Body:
+- Method:Put
+- URL/songs/1
+- Headers:{"Content-Type":"Application/json"}
+- Body:{newName: "Sinanay"}
 
 Response components:
 
@@ -337,16 +336,16 @@ Response components:
 
 Request components:
 
-- Method:
-- URL:
+- Method:Delete
+- URL:/songs/1
 - Headers:
 - Body:
 
 Response components:
 
-- Status code:
-- Headers:
-- Body:
+- Status code:200
+- Headers:Content-Type: application/json
+- Body:{"message":"Sucessfully deleted"}
 
 [http://localhost:5000]: http://localhost:5000
 [starter]: https://github.com/appacademy/practice-for-week-08-music-archive-docs-long-practice# JSON-project
